@@ -18,4 +18,4 @@ const wrapRedux = () => {
         </Provider>
     )
 }
-AppRegistry.registerComponent(appName, () => wrapRedux);
+AppRegistry.registerComponent(appName, () => wrapRedux)

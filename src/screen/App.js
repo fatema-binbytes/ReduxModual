@@ -1,9 +1,9 @@
 
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { TextInput, View,Button} from 'react-native'
-import {connect } from 'react-redux'
+import { connect } from 'react-redux'
 
-import {user} from '../store/action'
+import { user } from '../store/action'
 import TextComponent from '../components/text'
 import styles from './app-style'
 
@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      toList:''
+      toList : ''
     }
   }
   render() {
@@ -21,7 +21,7 @@ class App extends Component {
         <TextComponent style={styles.txt} text={this.props.user} />
         <Button title={'click'} onPress={()=>this.props.Add(this.state.toList)}/>
       </View>
-    );
+    )
   }
 }
 
