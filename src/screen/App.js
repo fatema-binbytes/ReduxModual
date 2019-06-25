@@ -1,6 +1,6 @@
 
-import React, {Component} from 'react';
-import { TextInput, View,Button} from 'react-native';
+import React, {Component} from 'react'
+import { TextInput, View,Button} from 'react-native'
 import {connect } from 'react-redux'
 
 import {user} from '../store/action'
@@ -17,9 +17,9 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TextInput placeholder="Enter Name" onChangeText={(text) => this.setState({toList:text})}/>
+        <TextInput placeholder='Enter Name' onChangeText={(text) => this.setState({toList:text})}/>
         <TextComponent style={styles.txt} text={this.props.user} />
-        <Button title={"click"} onPress={()=>this.props.Add(this.state.toList)}/>
+        <Button title={'click'} onPress={()=>this.props.Add(this.state.toList)}/>
       </View>
     );
   }
@@ -35,6 +35,6 @@ const mapDispatchToProps = ({
 const AppWrapper = connect (
     mapStateToProps,
     mapDispatchToProps
-  )(App)
+)(App)
 
 export default AppWrapper
