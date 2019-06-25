@@ -4,7 +4,7 @@ import {Text} from 'react-native'
 export default class TextComponent extends Component{
     render(){
         return(
-            <Text>
+            <Text style={this.props.style}>
                 {this.props.text}
             </Text>
         )

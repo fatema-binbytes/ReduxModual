@@ -1,16 +1,16 @@
-import {combineReducers} from 'redux'
 
 
-export function reducerName(state = null, action)
-{
-    if(action.type === "NAME"){
+ import actions from '../constant'
+
+const reducerName = (state = '',action) =>
+{ switch(action.type){
+        case  actions.NAME : 
         state = action.payload
-        return state
+            break
+        default:
+          break
+        }
+       return state
     }
-    return state
-}
-const allReducers = combineReducers({
-    name :reducerName
-})
-
-export default allReducers
+  
+export default reducerName

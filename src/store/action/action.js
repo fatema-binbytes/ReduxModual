@@ -1,7 +1,13 @@
-export function intCounter(value){
+import actions from '../constant' 
+const intCounter = (value) => {
     
-    return{
-        type :"NAME",
-        payload :value
-    }
+    return dispatch => {
+        dispatch({
+            type :actions.NAME,
+            payload :value
+      }) 
+     }
+}
+export default {
+    intCounter
 }
