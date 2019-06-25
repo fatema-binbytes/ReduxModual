@@ -1,10 +1,11 @@
 
 import React, {Component} from 'react';
-import {TouchableOpacity, StyleSheet, Text,TextInput, FlatList,View} from 'react-native';
+import { StyleSheet,TextInput, View} from 'react-native';
 
 import {connect } from 'react-redux'
 import {bindActionCreators} from 'redux'
-import {intCounter} from './src/action/action'
+import {intCounter} from '../store/action/action'
+import TextComponent from '../components/text'
 
 
 function mapStateToProps(state){
@@ -33,7 +34,7 @@ return bindActionCreators({
         <View >
           <TextInput placeholder="Enter Name" onChangeText={(text) => this.props.Add(text)}
           clearTextOnFocus={true}/>
-          <Text style={styles.welcome}>{this.props.name}</Text>
+          <TextComponent style={styles.welcome} text={this.props.name}/>
           
           
         
