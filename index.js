@@ -7,7 +7,7 @@ import logger from 'redux-logger'
 
 import {name as appName} from './app.json';
 import App from './src/screen/App';
-import reducers from './src/store/reducer/reducer'
+import reducers from './src/store/reducer'
 
 
 const store = createStore(reducers, applyMiddleware(thunk, logger))

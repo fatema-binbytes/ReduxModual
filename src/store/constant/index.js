@@ -1,7 +1,6 @@
 const actions = { 
     NAME: 'NAME',
-    
-  }
-  
-  export default actions
+ }
+
+export default actions
   
