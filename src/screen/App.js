@@ -17,7 +17,7 @@ class App extends Component {
       <View style={styles.container}>
         <TextInput placeholder='Enter Name' onChangeText={(text) => this.setState({toList:text})}/>
         <TextComponent style={styles.txt} text={this.props.user} />
-        <Button title={'click'} onPress={()=>this.props.Add(this.state.toList)}/>
+        <Button title={'click'} onPress={()=>this.props.navigation.navigate('Screen1')}/>
       </View>
     )
   }
