@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { TextInput, View, Button } from 'react-native'
 import { connect } from 'react-redux'
 import { user } from '../store/action'
-import TextComponent from '../components/Text'
+import TextComponent from '../components/TextComponent'
 import styles from './app-style'
 
 class App extends Component {
