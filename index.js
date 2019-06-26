@@ -6,7 +6,7 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 
 import {name as appName} from './app.json'
-import App from './src/screen/App'
+import AppStack from './src/navigation'
 import reducers from './src/store/reducer'
 
 
@@ -14,7 +14,7 @@ const store = createStore(reducers, applyMiddleware(thunk, logger))
 const wrapRedux = () => {
     return(
         <Provider store = {store}>
-           <App/>
+           <AppStack/>
         </Provider>
     )
 }
