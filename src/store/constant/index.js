@@ -1,5 +1,5 @@
 const actions = { 
-    NAME:'NAME',
+    NAME : 'NAME',
  }
 
 export default actions
