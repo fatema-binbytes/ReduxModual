@@ -5,7 +5,7 @@ import actions from '../constant'
       case actions.NAME : 
         state = action.payload
         break
-      default:
+      default :
         break
     }
     return state
