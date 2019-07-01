@@ -3,6 +3,7 @@ import { TextInput, Text, View, Button,TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import { user } from '../store/action'
 import TextComponent from '../components/TextComponent'
+
 import styles from './app-style'
 
 class App extends Component {
@@ -33,7 +34,7 @@ const mapStateToProps = (state) => ({
   user : state.user
 })
 const mapDispatchToProps = ({
-  Add : user.intName
+  Add : user.userName
 })
 
 const AppWrapper = connect (

@@ -1,6 +1,6 @@
 import actions from '../constant' 
 
-const intName = (value) => {
+const userName = (value) => {
     return dispatch => {
         dispatch ({
             type : actions.NAME,
@@ -9,4 +9,4 @@ const intName = (value) => {
     }
 }
     
-export default { intName }
+export default { userName }
