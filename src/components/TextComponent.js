@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import { Text } from 'react-native'
 
-export default class TextComponent extends Component {
+class TextComponent extends Component {
     render() {
         return (
             <Text style={this.props.style}>
@@ -10,3 +10,4 @@ export default class TextComponent extends Component {
         )
     }
 }
+export default  TextComponent

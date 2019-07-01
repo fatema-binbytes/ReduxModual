@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding:8,
         
-    }
+    },
+    color: { color:'#FFF' }
 })
 
 export default styles

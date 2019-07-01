@@ -15,14 +15,14 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TextInput placeholder='Enter Name' onChangeText={(text) => this.setState({toList:text})}/>
+        <TextInput placeholder='Enter Your Name' onChangeText={(text) => this.setState({toList:text})}/>
         <TouchableOpacity style={styles.button} onPress={() => this.props.Add(this.state.toList)}>
-          <Text>Click</Text>
+          <Text style={styles.color}>Click</Text>
         </TouchableOpacity>
        
         <TouchableOpacity style={styles.button} 
           onPress={()=>this.props.navigation.navigate('Screen1',{userName:this.props.user})}>
-          <Text style={{color:'#FFF'}}>Next</Text>
+          <Text style={styles.color}>Next</Text>
         </TouchableOpacity>
         {/* <TextComponent style={styles.txt} text={this.props.user} /> */}
         </View>
