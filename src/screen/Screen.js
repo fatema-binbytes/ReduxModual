@@ -7,8 +7,8 @@ class SecondScreen extends Component {
     render() {
         const UserName = this.props.navigation.getParam('userName')
         return (
-            <View style = {styles.container}>
-                <Text style = {styles.txt}>Hello, {UserName}</Text>
+            <View style={styles.container}>
+                <Text style={styles.txt}>Hello, {UserName}</Text>
             </View>
         )
     }
