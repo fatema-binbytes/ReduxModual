@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TextInput, View, Button } from 'react-native'
+import { TextInput, Text, View, Button,TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import { user } from '../store/action'
 import TextComponent from '../components/TextComponent'
@@ -16,9 +16,16 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <TextInput placeholder='Enter Name' onChangeText={(text) => this.setState({toList:text})}/>
-        <TextComponent style={styles.txt} text={this.props.user} />
-        <Button title={'click'} onPress={()=>this.props.navigation.navigate('Screen1')}/>
-      </View>
+        <TouchableOpacity style={styles.button} onPress={() => this.props.Add(this.state.toList)}>
+          <Text>Click</Text>
+        </TouchableOpacity>
+       
+        <TouchableOpacity style={styles.button} 
+          onPress={()=>this.props.navigation.navigate('Screen1',{userName:this.props.user})}>
+          <Text style={{color:'#FFF'}}>Next</Text>
+        </TouchableOpacity>
+        {/* <TextComponent style={styles.txt} text={this.props.user} /> */}
+        </View>
     )
   }
 }

@@ -1,19 +1,16 @@
 import React from 'react'
-import {AppRegistry} from 'react-native'
-import { createStore, applyMiddleware } from 'redux'
-import {Provider} from 'react-redux'
-import thunk from 'redux-thunk'
-import logger from 'redux-logger'
+import { AppRegistry } from 'react-native'
+import { Provider } from 'react-redux'
 
-import {name as appName} from './app.json'
+import { name as appName } from './app.json'
 import AppStack from './src/navigation'
-import reducers from './src/store/reducer'
+import Store from './src/store'
 
 
-const store = createStore(reducers, applyMiddleware(thunk, logger))
+
 const wrapRedux = () => {
-    return(
-        <Provider store = {store}>
+    return (
+        <Provider store = {Store}>
            <AppStack/>
         </Provider>
     )

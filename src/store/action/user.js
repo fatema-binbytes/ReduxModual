@@ -9,4 +9,4 @@ const intName = (value) => {
     }
 }
     
-export default  intName
+export default { intName }
